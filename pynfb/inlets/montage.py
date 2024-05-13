@@ -14,8 +14,9 @@ def azimuthal_equidistant_projection(hsp):
     phi = np.arctan2(hsp[:, 1], hsp[:, 0])
 
     # Mark the points that might have caused bad angle estimates
+    float_eps = np.finfo(float).eps
     iffy = np.nonzero(np.sum(hsp[:, :2] ** 2, axis=-1) ** (1. / 2)
-                      < np.finfo(np.float).eps * 10)
+                      < float_eps * 10) #float_eps = np.finfo(float).eps
     theta[iffy] = 0
     phi[iffy] = 0
 

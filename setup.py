@@ -9,12 +9,12 @@ install_requires = [
     "pyqt5",
     "pyopengl",
     "pyqtgraph",
-    "seaborn==0.10",
+    "seaborn>=0.13.0", #"seaborn==0.10"
     "scikit-learn",
     "sympy",
     "mne",
     "pylsl",
-    "matplotlib==2.2.4",
+    "matplotlib>=3.0.0", #matplotlib==2.2.4
     "gtts",
     "googletrans"
 ]
